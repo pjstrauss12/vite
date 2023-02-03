@@ -14,65 +14,6 @@
 <button class="del">Remove Last</button>
 </template>
 
-<script>
-let duplicateButton = document.querySelector('.add')
-duplicateButton.addEventListener('click', duplicator);
-
-let colorButton = document.querySelector('.toggle');
-colorButton.addEventListener('click', backColorChange);
-
-let deleteButton = document.querySelector('.del');
-deleteButton.addEventListener('click', deleter);
-
-let detailsButton = document.querySelector('.details');
-detailsButton.addEventListener('click', showhide);
-
-let btn = document.querySelector('.add')
-btn.addEventListener('mouseover', () => btn.style.backgroundColor= 'green'); 
-btn.addEventListener('mouseover', () => btn.style.color= 'yellow'); 
-btn.addEventListener('mouseout', () => btn.style.backgroundColor= 'red');
-btn.addEventListener('mouseout', () => btn.style.color= 'white');
-
-function duplicator(){
-  let d = document.querySelector('div');
-  let cloneNode = d.cloneNode(true);
-  document.body.appendChild(cloneNode);
-  console.log(cloneNode);
-}
-
-function backColorChange(){
-  var colors = document.querySelector(".fullcard");
-  if (colors.style.backgroundColor === "black"){
-    colors.style.backgroundColor = "blue";
-  }else{
-    colors.style.backgroundColor = "black";
-  }
-}
-
-function deleter(){
-  let d = document.querySelectorAll('div');
-  var last = d[d.length- 1];
-  if (d.length != 1){
-  last.remove();
-  }
-}
-
-function showhide(){
-  var para = document.querySelector("p");
-  if (para.style.display === "none"){
-    para.style.display = "inline-block";
-  }else{
-    para.style.display = "none";
-  }
-}
-
-document.querySelector('.word').addEventListener('click', function(e) {
-  document.querySelector('h1').textContent = 'Something else';
-  document.querySelector('p').textContent = 'Something else';
-});
-
-</script>
-
 <style>
 .fullcard {
   border: 5px solid;

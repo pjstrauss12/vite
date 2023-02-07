@@ -15,7 +15,7 @@
 </template>
 
 <script>
-export default{
+const app = Vue.createApp({
   methods: {
   duplicator(){
     let d = document.querySelector('div');
@@ -50,7 +50,7 @@ export default{
       }
     },
 },
-  mounted() {
+  data() {
   let duplicateButton = document.querySelector('.add')
   duplicateButton.addEventListener('click', duplicator);
 
@@ -76,7 +76,7 @@ export default{
 },
 
 
-};
+});
 </script>
 
 <style>

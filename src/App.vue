@@ -14,6 +14,7 @@
 <button class="del">Remove Last</button>
 </template>
 
+// this is where the js will go I believe
 
 <style>
 .fullcard {
